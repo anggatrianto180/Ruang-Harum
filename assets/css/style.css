@@ -30,12 +30,78 @@ h6 {
 --------------------------------------------------------------*/
 /* # Custom box desc product */
 .custom-box {
-  border: 1px solid #007bff;
-  border-radius: 10px;
-  padding: 10px;
+  background-color: #f8fbff;
+  border: 1px solid #cce5ff;
+  border-radius: 8px;
+  padding: 8px 15px;
   text-align: center;
-  color: #007bff;
-  margin: 1px 0;
+  color: #0056b3;
+  margin: 5px 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+.custom-box:hover {
+  background-color: #e6f2ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+}
+
+/* Custom Modal Styles for Elegance */
+.modal-content {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.modal-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20px 25px;
+}
+
+.modal-title {
+  font-weight: 700;
+  color: #2c3e50;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+.modal-header .btn-close {
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  padding: 0.6em;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.modal-header .btn-close:hover {
+  opacity: 1;
+  background-color: #e9ecef;
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 25px;
+}
+
+.modal-body img {
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.modal-body img:hover {
+  transform: scale(1.02);
+}
+
+.modal-body h6 {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* # Line */
@@ -840,32 +906,46 @@ section {
 }
 
 .portfolio .portfolio-wrap {
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
-  transition: 0.3s;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio .portfolio-wrap:hover {
-  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio .portfolio-item {
   position: relative;
-  height: 430px;
-  overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .portfolio .portfolio-item figure {
-  background: #000;
+  background: #f8f9fa;
   overflow: hidden;
-  height: 240px;
+  height: 250px;
   position: relative;
-  border-radius: 4px 4px 0 0;
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio .portfolio-item figure img {
+  transition: transform 0.5s ease, opacity 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .portfolio .portfolio-item figure:hover img {
-  opacity: 0.4;
-  transition: 0.4s;
+  opacity: 0.85;
+  transform: scale(1.06);
 }
 
 .portfolio .portfolio-item figure .link-preview,
@@ -925,21 +1005,24 @@ section {
 .portfolio .portfolio-item .portfolio-info {
   background: #fff;
   text-align: center;
-  padding: 30px;
-  height: 160px;
-  border-radius: 0 0 3px 3px;
+  padding: 25px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
-  line-height: 1px;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 18px;
-  padding-bottom: 0;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-family: "Poppins", sans-serif;
 }
 
 .portfolio .portfolio-item .portfolio-info h4 a {
-  color: #333;
+  color: #2c3e50;
+  transition: color 0.3s ease;
 }
 
 .portfolio .portfolio-item .portfolio-info h4 a:hover {
@@ -947,11 +1030,27 @@ section {
 }
 
 .portfolio .portfolio-item .portfolio-info p {
-  padding: 0;
-  margin: 3;
   color: #6c757d;
-  font-weight: 500;
-  font-size: 14px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Enhancing the button inside the card */
+.portfolio .portfolio-item .portfolio-info .btn {
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+.portfolio .portfolio-item .portfolio-info .btn-outline-info {
+  color: #3498db;
+  border-color: #3498db;
+}
+.portfolio .portfolio-item .portfolio-info .btn-outline-info:hover {
+  background-color: #3498db;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
 }
 
 /*--------------------------------------------------------------
